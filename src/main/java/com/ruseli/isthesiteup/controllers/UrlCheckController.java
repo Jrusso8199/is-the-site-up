@@ -26,11 +26,12 @@ public class UrlCheckController {
             conn.connect();
             int responseCodeCategory = conn.getResponseCode() / 100;
             //System.out.println(responseCodeCategory);
-            if (responseCodeCategory != 2 || responseCodeCategory != 3){
-                returnMessage = SITE_IS_DOWN;
+            if (responseCodeCategory == 2){
+                //System.out.println("in if");
+                returnMessage = SITE_IS_UP;
             } 
             else {
-                returnMessage = SITE_IS_UP;
+                returnMessage = SITE_IS_DOWN;
             }
         } catch (MalformedURLException e) {
             returnMessage = INCORRECT_URL;
