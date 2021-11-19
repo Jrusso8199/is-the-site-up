@@ -9,3 +9,4 @@ This app checks to see if a site is up. It will return "site is down" or "site i
 
 ## Problems
 There is a bug in the if statment that reguardless of the return type it returns "site is down".
+11-19-21 Fixed the problem with the if statment --Jason Russo
